@@ -4,6 +4,40 @@ float plot(vec2 st, float pct){
   return  smoothstep( pct-0.02, pct, 1.0-st.y) -
           smoothstep( pct, pct+0.02, 1.0-st.y);
 }
+
+float example_1(float x, float t)
+{
+	return 0.5 *smoothstep(0,0.7,sin(x+t));
+}
+
+float circle(float x){
+	
+	return sqrt(pow(0.5, 2.0)-pow(x,2.0));
+} 
+
+// shaping function of Iñigo Quiles
+//https://iquilezles.org/articles/functions/
+
+float gain( float x, float k ) 
+{
+    float a = 0.5*pow(2.0*((x<0.5)?x:1.0-x), k);
+    return (x<0.5)?a:1.0-a;
+}
+
+//  Function from Iñigo Quiles
+//  www.iquilezles.org/www/articles/functions/functions.htm
+float impulse( float k, float x ){
+    float h = k*x;
+    return h*exp(1.0-h);
+}
+
+//  Function from Iñigo Quiles
+//  www.iquilezles.org/www/articles/functions/functions.htm
+float pcurve( float x, float a, float b ){
+    float k = pow(a+b,a+b) / (pow(a,a)*pow(b,b));
+    return k * pow( x, a ) * pow( 1.0-x, b );
+}
+
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
@@ -16,8 +50,16 @@ void fragment() {
     // in that case it will return 1.0
     //float y = step(0.5,UV.x);
 	
-    // Smooth interpolation between 0.1 and 0.9
-    float y = smoothstep(0.1,0.9, UV.x);
+	// exercises
+	//float y = sin(TIME+UV.x);
+	//float y = sin(TIME+(UV.x*PI));
+	//float y = sin((UV.x*TIME));
+	//float y = sin((UV.x*15.0));
+	//float y = abs(sin(UV.x*12.0));
+	float y = fract(sin(UV.x*12.0));
+	
+    //Smooth interpolation between 0.1 and 0.9
+    //float y = smoothstep(0.1,0.9, UV.x);
 	//float y = smoothstep(0.2,0.5,UV.x) - smoothstep(0.5,0.8,UV.x);
 	
 	//float y = mod(UV.x,0.5); // return x modulo of 0.5
@@ -30,6 +72,13 @@ void fragment() {
 	//float y = min(0.0,UV.x);   // return the lesser of x and 0.0
 	//float y = max(0.0,UV.x);   // return the greater of x and 0.0 
 	
+
+    //float y = impulse(12.,UV.x);
+    //float y = pcurve(UV.x,3.0,1.0);
+    //float y = gain(UV.x,0.3);
+    //float y = signalpass(UV.x, UV.y);
+    //float y = circle(UV.x);
+
     vec3 color = vec3(y);
     float pct = plot(UV,y);
     color = (1.0-pct)*color+pct*vec3(0.0,1.0,0.0);
