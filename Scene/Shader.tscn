@@ -14,9 +14,10 @@ shader = ExtResource("3_rumq6")
 
 [node name="Shaping" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_7eerd")
+position = Vector2(64, 64)
 texture = ExtResource("2_idyo4")
 
 [node name="Colors" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_na5di")
-position = Vector2(137, 0)
+position = Vector2(208, 64)
 texture = ExtResource("2_idyo4")
