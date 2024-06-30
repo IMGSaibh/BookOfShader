@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=14 format=3 uid="uid://d3ne5ejl7h1le"]
 
-[ext_resource type="Shader" path="res://Shader/Shaping.gdshader" id="1_1vwi1"]
+[ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
-[ext_resource type="Shader" path="res://Shader/Colors.gdshader" id="3_rumq6"]
+[ext_resource type="Shader" path="res://Shader/Colors/RGBGradients.gdshader" id="3_rumq6"]
+[ext_resource type="Shader" path="res://Shader/Colors/HSB.gdshader" id="4_8pmil"]
+[ext_resource type="Shader" path="res://Shader/Colors/HSBPolarCoords.gdshader" id="5_4gnmm"]
+[ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawRectangles.gdshader" id="6_gcevk"]
+[ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawCircles.gdshader" id="7_xqeor"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -10,14 +14,48 @@ shader = ExtResource("1_1vwi1")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_na5di"]
 shader = ExtResource("3_rumq6")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_umwe4"]
+shader = ExtResource("4_8pmil")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tsh4a"]
+shader = ExtResource("5_4gnmm")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fqenn"]
+shader = ExtResource("6_gcevk")
+shader_parameter/verticalRectThickness = 0.0
+shader_parameter/horizontalRectThickness = 0.496
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eq622"]
+shader = ExtResource("7_xqeor")
+
 [node name="Node2D" type="Node2D"]
 
-[node name="Shaping" type="Sprite2D" parent="."]
+[node name="ShapingFunctions" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_7eerd")
 position = Vector2(64, 64)
 texture = ExtResource("2_idyo4")
 
-[node name="Colors" type="Sprite2D" parent="."]
+[node name="RGBGradients" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_na5di")
 position = Vector2(208, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="HSB" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_umwe4")
+position = Vector2(359, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="HSBPolarCoords" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_tsh4a")
+position = Vector2(506, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="DrawRectangles" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_fqenn")
+position = Vector2(663, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="DrawCircles" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_eq622")
+position = Vector2(815, 64)
 texture = ExtResource("2_idyo4")

@@ -43,9 +43,13 @@ void fragment() {
 
     // Step will return 0.0 unless the value is over 0.5,
     // in that case it will return 1.0
-    float y = step(0.5,UV.x);
+    //float y = step(0.5,UV.x);
 	
-	// exercises
+	/*
+	===========================================================
+							exercises
+	===========================================================
+	*/
 	//float y = sin(TIME+UV.x);
 	//float y = sin(TIME+(UV.x*PI));
 	//float y = sin((UV.x*TIME));
@@ -53,14 +57,14 @@ void fragment() {
 	//float y = abs(sin(UV.x*12.0));
 	//float y = fract(sin(UV.x*12.0));
 	
-    //Smooth interpolation between 0.1 and 0.9
-    //float y = smoothstep(0.1,0.9, UV.x);
+    // Smooth interpolation between 0.1 and 0.9
+    //float y = smoothstep(0.1,1.0, UV.x);
 	//float y = smoothstep(0.2,0.5,UV.x) - smoothstep(0.5,0.8,UV.x);
 	
 	//float y = mod(UV.x,0.5); // return x modulo of 0.5
 	//float y = fract(0.4); // return only the fraction part of a number
 	//float y = ceil(0.7);  // nearest integer that is greater than or equal to x
-	//float y = floor(1.0); // nearest integer less than or equal to x
+	float y = floor(0.1); // nearest integer less than or equal to x
 	//float y = sign(0.0);  // extract the sign of x
 	//float y = abs(UV.x);   // return the absolute value of x
 	//float y = clamp(UV.x,0.0,1.0); // constrain x to lie between 0.0 and 1.0
