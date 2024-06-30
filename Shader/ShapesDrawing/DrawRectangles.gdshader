@@ -1,6 +1,6 @@
 shader_type canvas_item;
 uniform float verticalRectThickness : hint_range(0.0, 0.5);
-uniform float horizontalRectThickness : hint_range(0.0, 0.5);
+
 
 vec3 halfRectangle(vec2 uv){
 	vec3 color = vec3(0.0);
@@ -51,36 +51,32 @@ vec3 fullRectangleProportionsSmoothstep(vec2 uv, float thickness){
     color = vec3(topLeftBorders);
 	return color;
 }
-vec3 DrawRectangle(vec2 uv, float verticalThickness, float verticalOffset, float horizontalThickness, float horizontalOffset){
-	vec3 color = vec3(0.0);
+float DrawRectangle(vec2 uv, float verticalThickness, float verticalOffset, float horizontalThickness, float horizontalOffset){
     float left = step(verticalThickness + verticalOffset, uv.x);
     float right = step(verticalThickness - verticalOffset, 1.0 - uv.x);
     float top = step(horizontalThickness + horizontalOffset, uv.y);
     float bottom = step(horizontalThickness - horizontalOffset, 1.0 - uv.y);
-    color = vec3( left * right * top * bottom);
-	return color;
+    return left * right * top * bottom;
 }
 
 void fragment() {
 	//vec4 color1 = vec4(0.0);
 	//vec4 color2 = vec4(0.0);
-	//color1 = vec4(fullRectangleProportions(UV, borderThickness), 1.0);
-	//color2 = vec4(fullRectangleProportionsSmoothstep(UV, borderThickness), 1.0);
+	//color1 = vec4(fullRectangleProportions(UV, verticalRectThickness), 1.0);
+	//color2 = vec4(fullRectangleProportionsSmoothstep(UV, verticalRectThickness), 1.0);
 	//COLOR = color1 * color2;
 	
-	vec4 color3 = vec4(0.0);
-	vec4 color4 = vec4(0.0);
-	vec4 color5 = vec4(0.0);
-	vec4 color6 = vec4(0.0);
-	vec4 color7 = vec4(0.0);
-	vec4 color8 = vec4(0.0);
-	color3 = vec4(DrawRectangle(UV, verticalRectThickness, 0.0, horizontalRectThickness, -0.3), 1.0);
-	color4 = vec4(DrawRectangle(UV, verticalRectThickness, 0.0, horizontalRectThickness, -0.15), 1.0);
-	color5 = vec4(DrawRectangle(UV, verticalRectThickness + 0.49, -0.3, 0.0, 0.0), 1.0);
-	color6 = vec4(DrawRectangle(UV, verticalRectThickness + 0.49, 0.2, 0.0, 0.0), 1.0);
-	color7 = vec4(DrawRectangle(UV, verticalRectThickness + 0.49, 0.4, 0.0, 0.0), 1.0);
-	color8 = vec4(DrawRectangle(UV, verticalRectThickness, 0.0, horizontalRectThickness, 0.4), 1.0);
-
-	COLOR = (color3 + color4 + color5 + color6 + color7 + color8) + vec4(vec3(0.7, 0.6, 0.5), 1.0);
+	vec4 color3 = vec4(DrawRectangle(UV, 0.4, -0.4, 0.3, -0.35)) * vec4(1.0, 0.0, 0.0, 1.0);
+	vec4 color4 = vec4(DrawRectangle(UV, 0.48, -0.28, 0.0, 0.0)) * vec4(0.0, 0.0, 0.0, 1.0);
+	vec4 color5 = vec4(DrawRectangle(UV, 0.48, 0.28, 0.0, 0.0)) * vec4(0.0, 0.0, 0.0, 1.0);
+	vec4 color6 = vec4(DrawRectangle(UV, 0.48,  0.45, 0.0, 0.0)) * vec4(0.0, 0.0, 0.0, 1.0);
+	vec4 color7 = vec4(DrawRectangle(UV, 0.0, 0.0, 0.48, -0.13)) * vec4(0.0, 0.0, 0.0, 1.0);
+	vec4 color8 = vec4(DrawRectangle(UV, 0.4, 0.57, 0.3, -0.35)) * vec4(1.0, 1.0, 0.0, 1.0);
+	
+	vec4 tempColor = color3 + color4 + color5 + color6 + color7 + color8 * vec4(1.0);
+	if (tempColor.a == 0.0){
+		tempColor = vec4(0.94, 0.93, 0.8, 1.0);
+	}
+	COLOR = tempColor;
 }
 

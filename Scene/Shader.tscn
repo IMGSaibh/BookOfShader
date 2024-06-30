@@ -22,8 +22,7 @@ shader = ExtResource("5_4gnmm")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fqenn"]
 shader = ExtResource("6_gcevk")
-shader_parameter/verticalRectThickness = 0.0
-shader_parameter/horizontalRectThickness = 0.496
+shader_parameter/verticalRectThickness = 0.082
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eq622"]
 shader = ExtResource("7_xqeor")
