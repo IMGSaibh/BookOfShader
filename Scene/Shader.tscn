@@ -26,6 +26,7 @@ shader_parameter/verticalRectThickness = 0.082
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eq622"]
 shader = ExtResource("7_xqeor")
+shader_parameter/circleRadius = 0.51
 
 [node name="Node2D" type="Node2D"]
 

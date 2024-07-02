@@ -43,7 +43,7 @@ void fragment() {
 
     // Step will return 0.0 unless the value is over 0.5,
     // in that case it will return 1.0
-    float y = step(0.5,UV.x);
+    //float y = step(0.5,UV.x);
 	
 	/*
 	===========================================================
@@ -67,9 +67,9 @@ void fragment() {
 	//float y = floor(0.1); // nearest integer less than or equal to x
 	//float y = sign(0.0);  // extract the sign of x
 	//float y = abs(UV.x);   // return the absolute value of x
-	//float y = clamp(UV.x,0.0,1.0); // constrain x to lie between 0.0 and 1.0
-	//float y = min(0.0,UV.x);   // return the lesser of x and 0.0
-	//float y = max(0.0,UV.x);   // return the greater of x and 0.0
+	//float y = clamp(UV.x,0.0,0.6); // constrain x to lie between 0.0 and 1.0
+	//float y = min(0.8,UV.x);   // return the lesser of x and 0.0
+	float y = max(0.4,UV.x);   // return the greater of x and 0.0
 	
     //float y = impulse(12.,UV.x);
     //float y = pcurve(UV.x,3.0,1.0);
