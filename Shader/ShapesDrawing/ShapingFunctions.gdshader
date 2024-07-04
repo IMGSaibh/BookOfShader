@@ -58,18 +58,18 @@ void fragment() {
 	//float y = fract(sin(UV.x*12.0));
 	
     // Smooth interpolation between 0.1 and 0.9
-    //float y = smoothstep(0.1,1.0, UV.x);
+    float y = smoothstep(0.0,1.0, UV.x);
 	//float y = smoothstep(0.2,0.5,UV.x) - smoothstep(0.5,0.8,UV.x);
 	
 	//float y = mod(UV.x,0.5); // return x modulo of 0.5
 	//float y = fract(0.4); // return only the fraction part of a number
-	//float y = ceil(0.7);  // nearest integer that is greater than or equal to x
-	//float y = floor(0.1); // nearest integer less than or equal to x
+	//float y = ceil(0.1);  // nearest integer that is greater than or equal to x
+	//float y = floor(0.6); // nearest integer that less than or equal to x
 	//float y = sign(0.0);  // extract the sign of x
 	//float y = abs(UV.x);   // return the absolute value of x
-	//float y = clamp(UV.x,0.0,0.6); // constrain x to lie between 0.0 and 1.0
+	//float y = clamp(UV.x,0.0,0.6); // constrain x to lie between 0.0 and 0.6
 	//float y = min(0.8,UV.x);   // return the lesser of x and 0.0
-	float y = max(0.4,UV.x);   // return the greater of x and 0.0
+	//float y = max(0.4,UV.x);   // return the greater of x and 0.0
 	
     //float y = impulse(12.,UV.x);
     //float y = pcurve(UV.x,3.0,1.0);

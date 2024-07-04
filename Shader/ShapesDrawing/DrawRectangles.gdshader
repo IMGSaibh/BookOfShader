@@ -1,5 +1,4 @@
 shader_type canvas_item;
-uniform float verticalRectThickness : hint_range(0.0, 0.5);
 
 
 vec3 halfRectangle(vec2 uv){
