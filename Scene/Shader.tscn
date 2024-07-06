@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=18 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -7,6 +7,8 @@
 [ext_resource type="Shader" path="res://Shader/Colors/HSBPolarCoords.gdshader" id="5_4gnmm"]
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawRectangles.gdshader" id="6_gcevk"]
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawCircles.gdshader" id="7_xqeor"]
+[ext_resource type="Shader" path="res://Shader/ShapesDrawing/DistanceFields.gdshader" id="8_i5lr3"]
+[ext_resource type="Shader" path="res://Shader/ShapesDrawing/PolarShapes.gdshader" id="9_ikpbn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -25,7 +27,15 @@ shader = ExtResource("6_gcevk")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eq622"]
 shader = ExtResource("7_xqeor")
-shader_parameter/circleRadius = 0.256
+shader_parameter/circleRadius = 0.394
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a5egl"]
+shader = ExtResource("8_i5lr3")
+shader_parameter/offset = 0.0
+shader_parameter/waves = 3.445
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bmmnf"]
+shader = ExtResource("9_ikpbn")
 
 [node name="Node2D" type="Node2D"]
 
@@ -57,4 +67,14 @@ texture = ExtResource("2_idyo4")
 [node name="DrawCircles" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_eq622")
 position = Vector2(815, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="DistanceFields" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_a5egl")
+position = Vector2(966, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="PolarShapes" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_bmmnf")
+position = Vector2(1125, 64)
 texture = ExtResource("2_idyo4")

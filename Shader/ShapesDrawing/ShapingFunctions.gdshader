@@ -12,7 +12,7 @@ float example_1(float x, float t)
 
 float circle(float x){
 	
-	return sqrt(pow(0.5, 2.0)-pow(x,2.0));
+	return sqrt(pow(0.5, 2.0) - pow(x,2.0));
 } 
 
 // shaping function of Iñigo Quiles
@@ -20,7 +20,7 @@ float circle(float x){
 float gain( float x, float k ) 
 {
     float a = 0.5*pow(2.0*((x<0.5)?x:1.0-x), k);
-    return (x<0.5)?a:1.0-a;
+    return (x < 0.5) ? a : 1.0 - a;
 }
 
 //  Function from Iñigo Quiles
