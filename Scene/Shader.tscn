@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=20 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawCircles.gdshader" id="7_xqeor"]
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/DistanceFields.gdshader" id="8_i5lr3"]
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/PolarShapes.gdshader" id="9_ikpbn"]
+[ext_resource type="Shader" path="res://Shader/ShapesDrawing/PolarShapes_2.gdshader" id="10_cd6ud"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -43,6 +44,12 @@ shader_parameter/pos_y = 0.5
 shader_parameter/gear_size = 0.321
 shader_parameter/gear_count = 9.0
 shader_parameter/cutout_circle_size = 0.069
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ayx1s"]
+shader = ExtResource("10_cd6ud")
+shader_parameter/pos_x = null
+shader_parameter/pos_y = null
+shader_parameter/corner_count = 6
 
 [node name="Node2D" type="Node2D"]
 
@@ -84,4 +91,9 @@ texture = ExtResource("2_idyo4")
 [node name="PolarShapes" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_bmmnf")
 position = Vector2(1125, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="PolarShapes_2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ayx1s")
+position = Vector2(1295, 64)
 texture = ExtResource("2_idyo4")
