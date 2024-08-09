@@ -82,5 +82,5 @@ void fragment() {
     float pct = plot(UV,y);
     color = (1.0-pct) * color + pct * vec3(0.0,1.0,0.0);
 
-    COLOR = vec4(color,1.0);
+    COLOR = vec4(color ,1.0);
 }

@@ -4,11 +4,15 @@ uniform float pos_cutout_y : hint_range(0.0, 1.0);
 
 uniform float pos_x : hint_range(0.0, 1.0);
 uniform float pos_y : hint_range(0.0, 1.0);
-uniform float size : hint_range(-0.5,0.5);
+
 uniform float gear_size : hint_range(0.0,2.0);
 uniform float gear_count : hint_range(0.0,12.0);
 uniform float cutout_circle_size : hint_range(0.0,0.5);
 
+float plot(vec2 st, float pct){
+  return  smoothstep( pct-0.02, pct, 1.0-st.y) -
+          smoothstep( pct, pct+0.02, 1.0-st.y);
+}
 
 vec3 circle(vec2 uv, float time){
 	vec2 pos = uv - vec2(pos_x, pos_y);
@@ -33,10 +37,11 @@ vec3 circle(vec2 uv, float time){
 	float dist_2 = distance(vec2(0.0), pos_cutout_circle_2);
 	float cutout_circle_2 = 1.0 - step(cutout_circle_size, dist_2);
 	
-	
+	//excersise 3
+    //float pct = plot(uv, 1.0 - smoothstep(f, f + 0.1, r));
+	//return vec3(pct);
+	//
 	return vec3(1.0 - smoothstep(f, f + 0.01, r) - cutout_circle_1 - cutout_circle_2);
-	
-	return vec3(1.0 - smoothstep(f, f + 0.01, r));
 }
 
 void fragment() {
