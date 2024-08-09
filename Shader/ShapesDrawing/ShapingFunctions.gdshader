@@ -10,11 +10,6 @@ float example_1(float x, float t)
 	return 0.5 *smoothstep(0,0.7,sin(x+t));
 }
 
-float circle(float x){
-	
-	return sqrt(pow(0.5, 2.0) - pow(x,2.0));
-} 
-
 // shaping function of Iñigo Quiles
 //https://iquilezles.org/articles/functions/
 float gain( float x, float k ) 
@@ -37,6 +32,11 @@ float pcurve( float x, float a, float b ){
     return k * pow( x, a ) * pow( 1.0-x, b );
 }
 
+float circle(float x){
+	
+	return sqrt(pow(0.5, 2.0) - pow(x,2.0));
+}
+
 void fragment() {
 	// Called for every pixel the material is visible on.
 	//float y = pow(UV.x,5.0);
@@ -50,15 +50,17 @@ void fragment() {
 							exercises
 	===========================================================
 	*/
-	//float y = sin(TIME+UV.x);
-	//float y = sin(TIME+(UV.x*PI));
-	//float y = sin((UV.x*TIME));
-	//float y = sin((UV.x*15.0));
-	//float y = abs(sin(UV.x*12.0));
-	//float y = fract(sin(UV.x*12.0));
-	
+	float y = sin(TIME+UV.x);
+	y = 0.5 * sin(2.0 * TIME + (UV.x*PI)) + 0.5;
+	y = 0.5 * tan(TIME + UV.x * 2.0) + 0.5;
+	y = 0.3 * atan(UV.x * 2.0) + 0.5;
+	//y = sin((UV.x*TIME));
+	//y = sin((UV.x * 15.0));
+	//y = abs(sin(UV.x*12.0));
+	//y = fract(sin(UV.x*12.0));
+	//
     // Smooth interpolation between 0.1 and 0.9
-    float y = smoothstep(0.0,1.0, UV.x);
+    //float y = smoothstep(0.0,1.0, UV.x);
 	//float y = smoothstep(0.2,0.5,UV.x) - smoothstep(0.5,0.8,UV.x);
 	
 	//float y = mod(UV.x,0.5); // return x modulo of 0.5
@@ -74,7 +76,7 @@ void fragment() {
     //float y = impulse(12.,UV.x);
     //float y = pcurve(UV.x,3.0,1.0);
     //float y = gain(UV.x,0.3);
-    //float y = circle(UV.x);
+   	y = circle(UV.x-0.5);
 
     vec3 color = vec3(y);
     float pct = plot(UV,y);

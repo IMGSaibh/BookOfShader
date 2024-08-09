@@ -27,15 +27,23 @@ shader = ExtResource("6_gcevk")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eq622"]
 shader = ExtResource("7_xqeor")
-shader_parameter/circleRadius = 0.394
+shader_parameter/circleRadius = 0.36
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a5egl"]
 shader = ExtResource("8_i5lr3")
-shader_parameter/offset = 0.0
-shader_parameter/waves = 3.445
+shader_parameter/offset = 0.47
+shader_parameter/waves = 5.723
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bmmnf"]
 shader = ExtResource("9_ikpbn")
+shader_parameter/pos_cutout_x = 0.4
+shader_parameter/pos_cutout_y = 0.4
+shader_parameter/pos_x = 0.5
+shader_parameter/pos_y = 0.5
+shader_parameter/size = 0.28
+shader_parameter/gear_size = 0.29
+shader_parameter/gear_count = 8.0
+shader_parameter/cutout_circle_size = 0.069
 
 [node name="Node2D" type="Node2D"]
 

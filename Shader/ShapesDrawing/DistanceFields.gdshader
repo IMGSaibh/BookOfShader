@@ -12,14 +12,15 @@ vec4 DrawingDistanceFunction(vec2 uv, float _waves, float _offset){
 
 	// Make the distance field
 	d = length(abs(uv) -_offset);
-	//d = length(min(abs(uv) - _offset, 0.0));
+	//d = length(uv -_offset);
+	d = length(min(abs(uv) - _offset, 0.0));
 	//d = length(max(abs(uv) - _offset, 0.0));
 	
 	// Visualize the distance field
-	return vec4(vec3(fract(d * _waves)),1.0);
+	//return vec4(vec3(fract(d * _waves)),1.0);
 	//return vec4(vec3( step(0.3, d) ), 1.0);
-	//return vec4(vec3( step(0.3, d) * step(d, 0.4)), 1.0);
-	//return vec4(vec3( smoothstep(0.3, 0.4,d) * smoothstep(0.6, 0.5,d)) ,1.0);
+	return vec4(vec3( step(0.3, d) * step(d, 0.4)), 1.0);
+	//return vec4(vec3( smoothstep(0.3, 0.4,d) * smoothstep(0.6, 0.5, d)) ,1.0);
 }
 
 vec4 DrawingDistanceFunctionScreenCoords(vec2 uv, float _waves, float _offset, vec2 screenPixelSize, vec4 fragCoord){
@@ -46,8 +47,8 @@ vec4 DrawingDistanceFunctionScreenCoords(vec2 uv, float _waves, float _offset, v
 }
 
 void fragment() {
-	vec2 screenPixelSize = SCREEN_PIXEL_SIZE;
-	vec4 fragCoord = FRAGCOORD;
-	COLOR = DrawingDistanceFunction(UV, waves, offset);
+	//vec2 screenPixelSize = SCREEN_PIXEL_SIZE;
+	//vec4 fragCoord = FRAGCOORD;
 	//COLOR = DrawingDistanceFunctionScreenCoords(UV, waves, offset, screenPixelSize, fragCoord);
+	COLOR = DrawingDistanceFunction(UV, waves, offset);
 }

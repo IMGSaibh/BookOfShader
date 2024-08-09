@@ -9,9 +9,9 @@ float DistanceOfPixel(vec2 uv){
     float pct = 0.0;
     // a. The DISTANCE from the pixel to the center
     pct = distance(uv, vec2(0.5));
-	//pct = distance(uv,vec2(0.4)) + distance(uv,vec2(0.6));
-	//pct = distance(uv,vec2(0.4)) * distance(uv,vec2(0.6));
-	//pct = min(distance(uv,vec2(0.4)),distance(uv,vec2(0.6)));
+	pct = distance(uv,vec2(0.4)) + distance(uv,vec2(0.6));
+	pct = distance(uv,vec2(0.4)) * distance(uv,vec2(0.6));
+	pct = min(distance(uv,vec2(0.4)),distance(uv,vec2(0.6)));
 	//pct = max(distance(uv,vec2(0.4)),distance(uv,vec2(0.6)));
 	//pct = pow(distance(uv,vec2(0.4)),distance(uv,vec2(0.6)));
 	
@@ -83,10 +83,10 @@ float DrawCricle_Perfomance(in vec2 uv, in float radius){
 
 void fragment() {
 	
-	//float value = DistanceOfPixel(UV);
-	//// remap from [-0.5, 0.5] to [-1.0, 1.0]
-	//value = remapInterval(value, -0.5, 0.5, -1.0, 1.0);
-	//COLOR = vec4(vec3(value), 1.0);
+	float value = DistanceOfPixel(UV);
+	// remap from [-0.5, 0.5] to [-1.0, 1.0]
+	value = remapInterval(value, -0.5, 0.5, -1.0, 1.0);
+	COLOR = vec4(vec3(value), 1.0);
 	
 	//COLOR = vec4(vec3(DrawCricle(UV, circleRadius)), 1.0);
 	//COLOR = vec4(vec3(DrawCricle_Step(UV, circleRadius)), 1.0);
@@ -101,7 +101,7 @@ void fragment() {
 	//vec4 circle_3 = vec4(vec3(DrawCricle_Displacement(UV, circleRadius, vec2(0.7, 0.7))), 1.0);
 	//COLOR = circle_1 + circle_2 +  circle_3;
 	
-	COLOR = vec4(vec3(DrawCricle_Perfomance(UV, circleRadius)), 1.0);
+	//COLOR = vec4(vec3(DrawCricle_Perfomance(UV, circleRadius)), 1.0);
 	
 
 }
