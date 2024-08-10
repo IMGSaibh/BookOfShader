@@ -47,9 +47,12 @@ shader_parameter/cutout_circle_size = 0.069
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ayx1s"]
 shader = ExtResource("10_cd6ud")
-shader_parameter/pos_x = null
-shader_parameter/pos_y = null
-shader_parameter/corner_count = 6
+shader_parameter/pos_x = 0.5
+shader_parameter/pos_y = 0.5
+shader_parameter/corner_count = 5
+shader_parameter/size_1_distance_field = null
+shader_parameter/size_2_distance_field = null
+shader_parameter/size_angle_based = 0.082
 
 [node name="Node2D" type="Node2D"]
 
