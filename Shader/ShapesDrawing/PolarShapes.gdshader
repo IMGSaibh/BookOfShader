@@ -20,7 +20,7 @@ vec3 circle(vec2 uv, float time){
 	float atan_angle = atan(pos.y, pos.x);
 	
 	//excersise 1
-	//atan_angle += time;
+	atan_angle += time;
 	
 	float f = sin(atan_angle * 4.0);
 	//f = abs(cos(atan_angle * 5.0));

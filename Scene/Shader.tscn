@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=24 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -10,6 +10,8 @@
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/DistanceFields.gdshader" id="8_i5lr3"]
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/PolarShapes.gdshader" id="9_ikpbn"]
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/PolarShapes_2.gdshader" id="10_cd6ud"]
+[ext_resource type="Shader" path="res://Shader/2D_Matrices/2D_Matrices.gdshader" id="10_gktan"]
+[ext_resource type="Shader" path="res://Shader/Practicing_1.gdshader" id="12_cnqst"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -49,10 +51,22 @@ shader_parameter/cutout_circle_size = 0.069
 shader = ExtResource("10_cd6ud")
 shader_parameter/pos_x = 0.5
 shader_parameter/pos_y = 0.5
-shader_parameter/corner_count = 5
+shader_parameter/corner_count = 9
 shader_parameter/size_1_distance_field = null
 shader_parameter/size_2_distance_field = null
-shader_parameter/size_angle_based = 0.082
+shader_parameter/size_angle_based = 0.265
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5f1ll"]
+shader = ExtResource("10_gktan")
+shader_parameter/pos_x = 0.0
+shader_parameter/pos_y = 0.0
+shader_parameter/size = 0.542
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
+shader = ExtResource("12_cnqst")
+shader_parameter/pos_x = 1.0
+shader_parameter/pos_y = 1.0
+shader_parameter/glow = 0.003
 
 [node name="Node2D" type="Node2D"]
 
@@ -99,4 +113,14 @@ texture = ExtResource("2_idyo4")
 [node name="PolarShapes_2" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_ayx1s")
 position = Vector2(1295, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="2D_Matrices" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_5f1ll")
+position = Vector2(1461, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="Practicing_1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_8a00e")
+position = Vector2(64, 232)
 texture = ExtResource("2_idyo4")

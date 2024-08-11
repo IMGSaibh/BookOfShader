@@ -80,11 +80,11 @@ vec3 draw_shape(vec2 uv, int corners_count)
 void fragment() {
 
 	//COLOR = square_distance_field(UV);
-	//COLOR = rounded_square(UV);
+	COLOR = rounded_square(UV);
 	//COLOR = square_angle_based(UV);
 	//COLOR = square_angle_based_parameterised(UV, corner_count);
 	
-	COLOR = vec4(draw_shape(UV, corner_count), 1.0);
+	//COLOR = vec4(draw_shape(UV, corner_count), 1.0);
 
 }
 
