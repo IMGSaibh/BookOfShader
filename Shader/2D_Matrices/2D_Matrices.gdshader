@@ -29,17 +29,18 @@ void fragment() {
 	vec2 pos = UV - vec2(pos_x, pos_y);
 	
     //// To move the cross we move the space.
-    //vec2 translate = vec2(cos(TIME), sin(TIME));
-    //pos += translate * 0.25;
+    vec2 translate = vec2(cos(TIME), sin(TIME));
+    pos += translate * 0.25;
 	
 	// move space from the center to the vec2(0.0)
     pos -= vec2(0.5);
-    // rotate the space
+    
+	// rotate the space
     //pos = rotate2d( sin(TIME) * PI ) * pos;
-    pos = scale( vec2(sin(TIME) + 1.0) ) * pos;
-    // move it back to the original place
+    //pos = scale( vec2(sin(TIME) + 1.0) ) * pos;
+    
+	// move it back to the original place
     pos += vec2(0.5);
-	
 	
 	// Show the coordinates of the space on the background
     color = vec3(pos.x, pos.y, 0.0);

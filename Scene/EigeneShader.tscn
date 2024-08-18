@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dph2jpca6vgpa"]
 
 [ext_resource type="Texture2D" uid="uid://fepg530wriq1" path="res://Sirup.jpg" id="1_35v34"]
-[ext_resource type="Shader" path="res://Shader/Television.gdshader" id="2_8lfe2"]
+[ext_resource type="Shader" path="res://Shader/Practice/Television.gdshader" id="2_8lfe2"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="3_s3j7u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_anify"]

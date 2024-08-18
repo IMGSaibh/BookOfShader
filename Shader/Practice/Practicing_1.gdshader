@@ -1,8 +1,8 @@
 //https://www.youtube.com/watch?v=f4s1h2YETNY&t=11s
 shader_type canvas_item;
-uniform float pos_x : hint_range(0.0, 1.0);
-uniform float pos_y : hint_range(0.0, 1.0);
 uniform float glow : hint_range(0.0, 0.1);
+uniform float zoom_out : hint_range(0.0, 1.0);
+
 
 vec3 palette( in float t)
 {
@@ -15,28 +15,31 @@ vec3 palette( in float t)
 }
 
 
-void fragment() {
+void fragment() {	
+	vec3 color = vec3(0.0);
 	vec3 final_color = vec3(0.0);
 	vec2 pos = UV * 2.0 - 1.0;
+	
 	vec2 original_pos = pos;
 	for(float i = 0.0; i < 4.0; i++)
 	{
 		//scale uv
 		pos *= 2.0;
 		//devide uv in 4 quadrants. but we have more because of preceding scaling
-		pos = fract(pos * 1.5);
+		pos = fract(pos * zoom_out);
 		// re-positioning each uv sqaure
 		pos -= 0.5;
 		
-		float dist = length(pos) * exp(-length(original_pos));
-		vec3 color = palette(length(original_pos) + i * 0.3 + TIME * 0.3);
+		float dist = length(pos);
+		dist *= exp(-length(original_pos));
+		color = palette(length(original_pos) + i * 0.3 + TIME * 0.3);
 		
 		
 		dist = sin(dist * 8.0 + TIME)/8.0;
 		dist = abs(dist);
 		dist = pow(glow/dist, 1.0);
 		 
-		final_color += color * dist;	
+		final_color += color * dist;
 	}
 	
 	COLOR = vec4(final_color, 1.0);

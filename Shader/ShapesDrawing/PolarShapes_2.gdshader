@@ -84,7 +84,7 @@ void fragment() {
 	//COLOR = square_angle_based(UV);
 	//COLOR = square_angle_based_parameterised(UV, corner_count);
 	
-	//COLOR = vec4(draw_shape(UV, corner_count), 1.0);
+	COLOR = vec4(draw_shape(UV, corner_count), 1.0);
 
 }
 
