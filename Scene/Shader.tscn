@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=40 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -17,6 +17,8 @@
 [ext_resource type="Shader" path="res://Shader/Practice/Practicing_2.gdshader" id="13_ogs7h"]
 [ext_resource type="Shader" path="res://Shader/Practice/Practicing_Signed_Distance.gdshader" id="13_qb8a2"]
 [ext_resource type="Shader" path="res://Shader/Patterns/Patterns_2.gdshader" id="14_lgamd"]
+[ext_resource type="Shader" path="res://Shader/Patterns/Patterns_3.gdshader" id="15_vb330"]
+[ext_resource type="Shader" path="res://Shader/Patterns/Patterns_4.gdshader" id="16_oo0vl"]
 [ext_resource type="Shader" path="res://Shader/Practice/Barber.gdshader" id="18_1j4vx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
@@ -77,6 +79,15 @@ shader_parameter/radius = 0.252
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c4o0c"]
 shader = ExtResource("14_lgamd")
+shader_parameter/size = 0.589
+shader_parameter/smooth_edges = 0.0
+shader_parameter/angle = 0.397
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pigrw"]
+shader = ExtResource("15_vb330")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q26pd"]
+shader = ExtResource("16_oo0vl")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
 shader = ExtResource("12_cnqst")
@@ -165,6 +176,16 @@ texture = ExtResource("2_idyo4")
 [node name="Patterns_2" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_c4o0c")
 position = Vector2(209, 265)
+texture = ExtResource("2_idyo4")
+
+[node name="Patterns_3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_pigrw")
+position = Vector2(359, 265)
+texture = ExtResource("2_idyo4")
+
+[node name="Patterns_4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_q26pd")
+position = Vector2(505, 265)
 texture = ExtResource("2_idyo4")
 
 [node name="Node2D" type="Node2D" parent="."]
