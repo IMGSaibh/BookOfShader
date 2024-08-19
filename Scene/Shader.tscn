@@ -1,9 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=36 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
 [ext_resource type="Shader" path="res://Shader/Colors/RGBGradients.gdshader" id="3_rumq6"]
 [ext_resource type="Shader" path="res://Shader/Colors/HSB.gdshader" id="4_8pmil"]
+[ext_resource type="Shader" path="res://Shader/Colors/Converting_Color_Space.gdshader" id="5_2d8lm"]
 [ext_resource type="Shader" path="res://Shader/Colors/HSBPolarCoords.gdshader" id="5_4gnmm"]
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawRectangles.gdshader" id="6_gcevk"]
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawCircles.gdshader" id="7_xqeor"]
@@ -15,6 +16,8 @@
 [ext_resource type="Shader" path="res://Shader/Practice/Practicing_1.gdshader" id="12_cnqst"]
 [ext_resource type="Shader" path="res://Shader/Practice/Practicing_2.gdshader" id="13_ogs7h"]
 [ext_resource type="Shader" path="res://Shader/Practice/Practicing_Signed_Distance.gdshader" id="13_qb8a2"]
+[ext_resource type="Shader" path="res://Shader/Patterns/Patterns_2.gdshader" id="14_lgamd"]
+[ext_resource type="Shader" path="res://Shader/Practice/Barber.gdshader" id="18_1j4vx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -24,6 +27,9 @@ shader = ExtResource("3_rumq6")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_umwe4"]
 shader = ExtResource("4_8pmil")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kwbah"]
+shader = ExtResource("5_2d8lm")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tsh4a"]
 shader = ExtResource("5_4gnmm")
@@ -67,7 +73,10 @@ shader_parameter/size = 0.542
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7kmw3"]
 shader = ExtResource("12_74yud")
-shader_parameter/radius = null
+shader_parameter/radius = 0.252
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c4o0c"]
+shader = ExtResource("14_lgamd")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
 shader = ExtResource("12_cnqst")
@@ -88,6 +97,9 @@ shader_parameter/test = 5.838
 shader_parameter/test_2 = 115.026
 shader_parameter/time_sim = 6.283
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ly7dm"]
+shader = ExtResource("18_1j4vx")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="ShapingFunctions" type="Sprite2D" parent="."]
@@ -103,6 +115,11 @@ texture = ExtResource("2_idyo4")
 [node name="HSB" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_umwe4")
 position = Vector2(359, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="Converting_Color_Space" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kwbah")
+position = Vector2(359, -86)
 texture = ExtResource("2_idyo4")
 
 [node name="HSBPolarCoords" type="Sprite2D" parent="."]
@@ -145,6 +162,11 @@ material = SubResource("ShaderMaterial_7kmw3")
 position = Vector2(65, 265)
 texture = ExtResource("2_idyo4")
 
+[node name="Patterns_2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_c4o0c")
+position = Vector2(209, 265)
+texture = ExtResource("2_idyo4")
+
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Practicing_1" type="Sprite2D" parent="Node2D"]
@@ -161,5 +183,11 @@ texture = ExtResource("2_idyo4")
 [node name="Practicing_Signed_Distance" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_dommj")
 position = Vector2(360, 493)
+rotation = -3.14159
+texture = ExtResource("2_idyo4")
+
+[node name="Barber" type="Sprite2D" parent="Node2D"]
+material = SubResource("ShaderMaterial_ly7dm")
+position = Vector2(516, 493)
 rotation = -3.14159
 texture = ExtResource("2_idyo4")
