@@ -27,7 +27,8 @@ float two_circles(vec2 uv)
 float archie_circle(vec2 uv)
 {
 	// P(x, y) auf dem Einheitskreis ist x = cos(angle_in_rad) und y = sin(angle_in_rad)
-	vec2 pos = uv - vec2(pos_x, pos_y);
+	//vec2 pos = uv - vec2(pos_x, pos_y);
+	vec2 pos = vec2(pos_x, pos_y) - uv;
 	float angle_in_rad = atan(pos.y, pos.x);
 	float angle_in_degree = (angle_in_rad * 180.0/PI);
 	float value = 0.0;
@@ -40,7 +41,7 @@ float archie_circle(vec2 uv)
 		value = 1.0;
 	}
 	
-	vec2 sc = vec2(sin(time_sim), cos(time_sim));
+	//vec2 sc = vec2(sin(time_sim), cos(time_sim));
 	value -= sin(length(pos) * 19.0);
 
 	value = step(0.1, value);

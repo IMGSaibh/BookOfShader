@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=42 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -19,6 +19,7 @@
 [ext_resource type="Shader" path="res://Shader/Patterns/Patterns_2.gdshader" id="14_lgamd"]
 [ext_resource type="Shader" path="res://Shader/Patterns/Patterns_3.gdshader" id="15_vb330"]
 [ext_resource type="Shader" path="res://Shader/Patterns/Patterns_4.gdshader" id="16_oo0vl"]
+[ext_resource type="Shader" path="res://Shader/Patterns/Patterns_5_Truchet_Kacheln.gdshader" id="17_s5h1q"]
 [ext_resource type="Shader" path="res://Shader/Practice/Barber.gdshader" id="18_1j4vx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
@@ -79,15 +80,23 @@ shader_parameter/radius = 0.252
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c4o0c"]
 shader = ExtResource("14_lgamd")
-shader_parameter/size = 0.589
+shader_parameter/size = 0.075
 shader_parameter/smooth_edges = 0.0
-shader_parameter/angle = 0.397
+shader_parameter/angle = 0.0
+shader_parameter/size_angle_based = 0.253
+shader_parameter/pos_x = 0.0
+shader_parameter/pos_y = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pigrw"]
 shader = ExtResource("15_vb330")
+shader_parameter/time_sim = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q26pd"]
 shader = ExtResource("16_oo0vl")
+shader_parameter/zoom = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_srhna"]
+shader = ExtResource("17_s5h1q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
 shader = ExtResource("12_cnqst")
@@ -105,7 +114,7 @@ shader_parameter/pos_x = 0.507
 shader_parameter/pos_y = 0.507
 shader_parameter/radius = 0.0
 shader_parameter/test = 5.838
-shader_parameter/test_2 = 115.026
+shader_parameter/test_2 = 51.806
 shader_parameter/time_sim = 6.283
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ly7dm"]
@@ -186,6 +195,11 @@ texture = ExtResource("2_idyo4")
 [node name="Patterns_4" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_q26pd")
 position = Vector2(505, 265)
+texture = ExtResource("2_idyo4")
+
+[node name="Patterns_5_Truchet_Kacheln" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_srhna")
+position = Vector2(652, 265)
 texture = ExtResource("2_idyo4")
 
 [node name="Node2D" type="Node2D" parent="."]

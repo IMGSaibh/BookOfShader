@@ -1,4 +1,6 @@
 shader_type canvas_item;
+uniform int zoom : hint_range(0, 10);
+
 vec2 rotate2D (vec2 uv, float _angle) {
     uv -= 0.5;
     uv =  mat2(vec2(cos(_angle), -sin(_angle)),
@@ -7,10 +9,20 @@ vec2 rotate2D (vec2 uv, float _angle) {
     return uv;
 }
 
-vec2 tile (vec2 uv, float _zoom) {
-    uv *= _zoom;
-    return fract(uv);
+vec2 tile (vec2 uv, int _zoom) {
+    uv *= float(_zoom);
+	uv = fract(uv);
+    return uv;
 }
+
+float myTile(vec2 uv, int _zoom)
+{
+	float pattern = step(0.9, uv.x); 
+	pattern += step(0.9, uv.y);
+	pattern += step(0.8, uv.x);
+	return pattern;
+}
+
 
 vec2 rotateTilePattern(vec2 uv){
 
@@ -50,17 +62,22 @@ vec2 rotateTilePattern(vec2 uv){
 }
 void fragment() {
 	vec2 uv = UV;
-    uv = tile(uv, 3.0);
+    uv = tile(uv, zoom);
+	
     uv = rotateTilePattern(uv);
 
 	// Make more interesting combinations
-	//uv = tile(uv, 2.0);
+	//uv = tile(uv, zoom);
 	//uv = rotate2D(uv, -PI * TIME * 0.25);
-	//uv = rotateTilePattern(uv * 2.0);
-	//uv = rotate2D(uv, PI * TIME * 0.25);
+	uv = rotateTilePattern(uv * 2.0);
+	uv = rotate2D(uv, PI * TIME * 0.25);
+	
 
-	// step(uv.x,uv.y) just makes a b&w triangles
+	 //just makes a b&w triangles
+	step(uv.x,uv.y); 
 	// but you can use whatever design you want.
 	COLOR = vec4(vec3(step(uv.x,uv.y)), 1.0);
+	
+	//COLOR = vec4(vec3(myTile(uv, zoom)), 1.0);
 }
 

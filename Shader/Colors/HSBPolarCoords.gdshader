@@ -28,7 +28,7 @@ vec4 HsbToPolarCoords(vec2 uv, float time){
     // Map the angle (-PI to PI) to the Hue (from 0 to 1)
     // and the Saturation to the radius
 	//divide angle by TWO_PI to get values between -0.5 to 0.5
-    color = hsb2rgb(vec3((angle/TWO_PI) + 0.5, radius, 1.0));
+    //color = hsb2rgb(vec3((angle/TWO_PI) + 0.5, radius, 1.0));
 	
     float shapedHue = uv.x;
     shapedHue = pow(uv.x, 5.0);
