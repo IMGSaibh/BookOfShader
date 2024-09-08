@@ -1,6 +1,4 @@
 shader_type canvas_item;
-#define TWO_PI 6.28318530718
-uniform float time_sim : hint_range(0.0, TWO_PI);
 
 vec2 brickTile(vec2 uv, float _zoom){
     uv *= _zoom;

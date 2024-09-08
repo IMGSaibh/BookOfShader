@@ -63,9 +63,9 @@ shader_parameter/cutout_circle_size = 0.069
 shader = ExtResource("10_cd6ud")
 shader_parameter/pos_x = 0.5
 shader_parameter/pos_y = 0.5
-shader_parameter/corner_count = 3
-shader_parameter/size_1_distance_field = 0.15
-shader_parameter/size_2_distance_field = 0.252
+shader_parameter/corner_count = 4
+shader_parameter/size_1_distance_field = 0.309
+shader_parameter/size_2_distance_field = 0.266
 shader_parameter/size_angle_based = 0.16
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5f1ll"]
@@ -89,14 +89,18 @@ shader_parameter/pos_y = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pigrw"]
 shader = ExtResource("15_vb330")
-shader_parameter/time_sim = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q26pd"]
 shader = ExtResource("16_oo0vl")
-shader_parameter/zoom = 1
+shader_parameter/zoom = 5
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_srhna"]
 shader = ExtResource("17_s5h1q")
+shader_parameter/truchetTiling = 1
+shader_parameter/hStripeThickness = 0.01
+shader_parameter/pos_x = 0.496
+shader_parameter/pos_y = 0.126
+shader_parameter/size_1_distance_field = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
 shader = ExtResource("12_cnqst")
@@ -110,12 +114,12 @@ shader_parameter/rings = 11.215
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dommj"]
 shader = ExtResource("13_qb8a2")
-shader_parameter/pos_x = 0.507
-shader_parameter/pos_y = 0.507
-shader_parameter/radius = 0.0
-shader_parameter/test = 5.838
-shader_parameter/test_2 = 51.806
-shader_parameter/time_sim = 6.283
+shader_parameter/pos_x = 0.5
+shader_parameter/pos_y = 0.5
+shader_parameter/radius = 0.051
+shader_parameter/test = 7.067
+shader_parameter/test_2 = 143.906
+shader_parameter/time_sim = 3.463
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ly7dm"]
 shader = ExtResource("18_1j4vx")

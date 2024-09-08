@@ -64,13 +64,10 @@ void fragment() {
 	vec2 uv = UV;
     uv = tile(uv, zoom);
 	
-    uv = rotateTilePattern(uv);
-
 	// Make more interesting combinations
 	//uv = tile(uv, zoom);
-	//uv = rotate2D(uv, -PI * TIME * 0.25);
-	uv = rotateTilePattern(uv * 2.0);
-	uv = rotate2D(uv, PI * TIME * 0.25);
+	uv = rotate2D(uv, -PI * TIME * 0.25);
+	uv = rotateTilePattern(uv);
 	
 
 	 //just makes a b&w triangles
