@@ -96,10 +96,10 @@ shader_parameter/zoom = 5
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_srhna"]
 shader = ExtResource("17_s5h1q")
-shader_parameter/truchetTiling = 1
+shader_parameter/truchetTiling = 4
 shader_parameter/hStripeThickness = 0.01
-shader_parameter/pos_x = 0.496
-shader_parameter/pos_y = 0.126
+shader_parameter/pos_x = 0.786
+shader_parameter/pos_y = 0.859
 shader_parameter/size_1_distance_field = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
@@ -210,23 +210,23 @@ texture = ExtResource("2_idyo4")
 
 [node name="Practicing_1" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_8a00e")
-position = Vector2(64, 493)
+position = Vector2(64, 722)
 texture = ExtResource("2_idyo4")
 
 [node name="Practicing_2" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_2gcpw")
-position = Vector2(208, 494)
+position = Vector2(208, 723)
 scale = Vector2(0.999999, 1)
 texture = ExtResource("2_idyo4")
 
 [node name="Practicing_Signed_Distance" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_dommj")
-position = Vector2(360, 493)
+position = Vector2(360, 722)
 rotation = -3.14159
 texture = ExtResource("2_idyo4")
 
 [node name="Barber" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_ly7dm")
-position = Vector2(516, 493)
+position = Vector2(516, 722)
 rotation = -3.14159
 texture = ExtResource("2_idyo4")

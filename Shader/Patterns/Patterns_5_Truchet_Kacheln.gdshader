@@ -8,15 +8,45 @@ uniform float size_1_distance_field : hint_range(0.0, 0.5);
 
 const float SQUARE_SIZE = 0.12;
 
-float getQuantizedSinValue(float sinValue) {
-    // Wir teilen den Bereich von 0 bis 1 in drei gleich große Intervalle auf
-    return floor(sinValue * 5.0) * 0.5 + 0.5;
+float getCyclicValue_Y(float time) {
+    float cycleDuration = 3.0; // Dauer eines vollständigen Zyklus
+    float phase = time / cycleDuration;
+    
+    // Wir nutzen die modulare Arithmetik, um die Phase immer zwischen 0 und 1 zu halten
+    phase = mod(phase, 1.0);
+
+    // Nun wählen wir einen der drei Werte basierend auf der Phase aus
+    if (phase < 0.12) {
+        return 0.12;
+    } else if (phase < 0.37) {
+        return 0.37;
+    } else if (phase < 0.62) {
+        return 0.62;
+    }else{
+		return 0.86;
+	}
+}
+
+float getCyclicValue_X(float time) {
+    float cycleDuration = 3.0; // Dauer eines vollständigen Zyklus
+    float phase = time / cycleDuration;
+    
+    // Wir nutzen die modulare Arithmetik, um die Phase immer zwischen 0 und 1 zu halten
+    phase = mod(phase, 1.0);
+
+    // Nun wählen wir einen der drei Werte basierend auf der Phase aus
+    if (phase < 0.18) {
+        return 0.18;
+    } else if (phase < 0.5) {
+        return 0.5;
+    }else{
+		return 0.78;
+	}
 }
 
 float tileHorizontal(vec2 uv, int _truchetTiling, float sinusValue) {
 	uv *= float(_truchetTiling);
 	uv = fract(uv);
-	float rectAngle = 0.0;
 	float vStripes_1 = 0.0;
 	float vStripes_2 = 0.0;
 	
@@ -34,7 +64,7 @@ float tileHorizontal(vec2 uv, int _truchetTiling, float sinusValue) {
 	hStripes_3 = step(0.01 - hStripeThickness + 0.73, uv.y) - step(0.02  + hStripeThickness + 0.73, uv.y);
 	hStripes_4 = step(0.01 - hStripeThickness + 0.92, uv.y) - step(0.02  + hStripeThickness + 0.97, uv.y);
 	
-	vec2 squarePos = uv - vec2(pos_x, pos_y);
+	vec2 squarePos = uv - vec2(getCyclicValue_X(TIME), getCyclicValue_Y(TIME));
 	//The abs() function makes negative numbers positive - it flips them around zero. 
 	//Since our uv coordinate is negative to the left and above, taking abs() from it
 	//and setting red to c.x and green to c.y results in a symmetrical image around the center
