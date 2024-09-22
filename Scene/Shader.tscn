@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=73 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -28,6 +28,15 @@
 [ext_resource type="Shader" path="res://Shader/Random/Random_5.gdshader" id="22_gn20k"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_1.gdshader" id="23_27due"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_2.gdshader" id="24_3rwoa"]
+[ext_resource type="Shader" path="res://Shader/Noise/Noise_3.gdshader" id="25_a0jc3"]
+[ext_resource type="Shader" path="res://Shader/Noise/Noise_4.gdshader" id="26_0sy53"]
+[ext_resource type="Shader" path="res://Shader/Noise/Noise_5.gdshader" id="27_fn2fs"]
+[ext_resource type="Shader" path="res://Shader/Noise/Noise_6.gdshader" id="28_tp6lk"]
+[ext_resource type="Shader" path="res://Shader/Noise/Noise_7.gdshader" id="29_p06ms"]
+[ext_resource type="Shader" path="res://Shader/Noise/Noise_8.gdshader" id="30_api08"]
+[ext_resource type="Shader" path="res://Shader/Noise/Noise_9.gdshader" id="31_q5b45"]
+[ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_1.gdshader" id="32_gwt6b"]
+[ext_resource type="Script" path="res://Shader/CellularNoise/Cellurar_Noise_1.gd" id="33_uyjjy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -132,6 +141,42 @@ shader = ExtResource("23_27due")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n5qra"]
 shader = ExtResource("24_3rwoa")
+shader_parameter/scale = 16.822
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6tipj"]
+shader = ExtResource("25_a0jc3")
+shader_parameter/left_side = 0.029
+shader_parameter/right_side = 0.679
+shader_parameter/top_side = 0.042
+shader_parameter/bottom_side = 0.041
+shader_parameter/rect_offset_1 = 0.327
+shader_parameter/rect_offset_2 = 0.649
+shader_parameter/scale = 89.72
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_srmy3"]
+shader = ExtResource("26_0sy53")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xb3fa"]
+shader = ExtResource("27_fn2fs")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ddwsc"]
+shader = ExtResource("28_tp6lk")
+shader_parameter/pos_x = null
+shader_parameter/pos_y = 0.0
+shader_parameter/size = 0.514
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g5mqd"]
+shader = ExtResource("29_p06ms")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qfvf1"]
+shader = ExtResource("30_api08")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1uhvb"]
+shader = ExtResource("31_q5b45")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y45kj"]
+shader = ExtResource("32_gwt6b")
+shader_parameter/mouse_xy = null
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
 shader = ExtResource("12_cnqst")
@@ -147,10 +192,8 @@ shader_parameter/rings = 11.215
 shader = ExtResource("13_qb8a2")
 shader_parameter/pos_x = 0.5
 shader_parameter/pos_y = 0.5
-shader_parameter/radius = 0.051
-shader_parameter/test = 7.067
-shader_parameter/test_2 = 143.906
-shader_parameter/time_sim = 3.463
+shader_parameter/radius = 0.37
+shader_parameter/moveable_angle = 115.024
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ly7dm"]
 shader = ExtResource("18_1j4vx")
@@ -272,27 +315,68 @@ material = SubResource("ShaderMaterial_n5qra")
 position = Vector2(1009, 439)
 texture = ExtResource("2_idyo4")
 
+[node name="Noise_3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_6tipj")
+position = Vector2(1158, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_srmy3")
+position = Vector2(1299, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_5" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_xb3fa")
+position = Vector2(1444, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_6" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ddwsc")
+position = Vector2(1586, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_7" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_g5mqd")
+position = Vector2(1754, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_8" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qfvf1")
+position = Vector2(1909, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_9" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_1uhvb")
+position = Vector2(67, 624)
+texture = ExtResource("2_idyo4")
+
+[node name="Cellurar_Noise_1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_y45kj")
+position = Vector2(246, 624)
+texture = ExtResource("2_idyo4")
+script = ExtResource("33_uyjjy")
+
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Practicing_1" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_8a00e")
-position = Vector2(64, 722)
+position = Vector2(64, 962)
 texture = ExtResource("2_idyo4")
 
 [node name="Practicing_2" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_2gcpw")
-position = Vector2(208, 723)
+position = Vector2(208, 963)
 scale = Vector2(0.999999, 1)
 texture = ExtResource("2_idyo4")
 
 [node name="Practicing_Signed_Distance" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_dommj")
-position = Vector2(360, 722)
+position = Vector2(360, 962)
 rotation = -3.14159
 texture = ExtResource("2_idyo4")
 
 [node name="Barber" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_ly7dm")
-position = Vector2(516, 722)
+position = Vector2(516, 962)
 rotation = -3.14159
 texture = ExtResource("2_idyo4")

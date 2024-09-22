@@ -6,7 +6,7 @@ float random (vec2 st) {
 
 void fragment() {
 	vec2 uv = UV;
-	uv *= 5.0; // Scale the coordinate system by 10
+	uv *= 4.0; // Scale the coordinate system by 10
 	vec2 ipos = floor(uv);  // get the integer coords
 	vec2 fpos = fract(uv);  // get the fractional coords
 

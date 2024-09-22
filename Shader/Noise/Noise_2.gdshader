@@ -1,4 +1,5 @@
 shader_type canvas_item;
+uniform float scale : hint_range(0.0, 400.0);
 
 // 2D Random
 float random (in vec2 st) {
@@ -31,7 +32,7 @@ float noise (in vec2 st) {
 void fragment() {
     // Scale the coordinate system to see
     // some noise in action
-    vec2 pos = vec2(UV * 5.0);
+    vec2 pos = vec2(UV * scale);
 
     // Use the noise function
     float n = noise(pos);
