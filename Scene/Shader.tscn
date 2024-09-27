@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=90 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -45,6 +45,7 @@
 [ext_resource type="Shader" path="res://Shader/FBM/FBM_2.gdshader" id="39_ga3y3"]
 [ext_resource type="Shader" path="res://Shader/FBM/FBM_3.gdshader" id="40_f0p2a"]
 [ext_resource type="Shader" path="res://Shader/FBM/FBM_4.gdshader" id="41_bj3o7"]
+[ext_resource type="Shader" path="res://Shader/Practice/Practicing_3.gdshader" id="44_hd5s4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -218,6 +219,9 @@ shader_parameter/zoom_out = 0.828
 shader = ExtResource("13_ogs7h")
 shader_parameter/glow = 0.0
 shader_parameter/rings = 11.215
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f4s3k"]
+shader = ExtResource("44_hd5s4")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dommj"]
 shader = ExtResource("13_qb8a2")
@@ -440,6 +444,13 @@ material = SubResource("ShaderMaterial_2gcpw")
 position = Vector2(210, 1153)
 scale = Vector2(0.999999, 1)
 texture = ExtResource("2_idyo4")
+
+[node name="Practicing_3" type="Sprite2D" parent="Node2D"]
+material = SubResource("ShaderMaterial_f4s3k")
+position = Vector2(693, 1150.75)
+scale = Vector2(0.964844, 0.964844)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
 
 [node name="Practicing_Signed_Distance" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_dommj")
