@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=88 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -35,8 +35,16 @@
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_7.gdshader" id="29_p06ms"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_8.gdshader" id="30_api08"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_9.gdshader" id="31_q5b45"]
+[ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_2.gdshader" id="32_dbqwv"]
 [ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_1.gdshader" id="32_gwt6b"]
+[ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_3.gdshader" id="33_nhst1"]
 [ext_resource type="Script" path="res://Shader/CellularNoise/Cellurar_Noise_1.gd" id="33_uyjjy"]
+[ext_resource type="Script" path="res://Shader/CellularNoise/Cellurar_Noise_3.gd" id="36_70yvg"]
+[ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_4.gdshader" id="37_e0dow"]
+[ext_resource type="Shader" path="res://Shader/FBM/FBM_1.gdshader" id="38_7cl1r"]
+[ext_resource type="Shader" path="res://Shader/FBM/FBM_2.gdshader" id="39_ga3y3"]
+[ext_resource type="Shader" path="res://Shader/FBM/FBM_3.gdshader" id="40_f0p2a"]
+[ext_resource type="Shader" path="res://Shader/FBM/FBM_4.gdshader" id="41_bj3o7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -174,9 +182,32 @@ shader = ExtResource("30_api08")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1uhvb"]
 shader = ExtResource("31_q5b45")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wk0ln"]
+shader = ExtResource("32_dbqwv")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y45kj"]
 shader = ExtResource("32_gwt6b")
 shader_parameter/mouse_xy = null
+shader_parameter/numPoints = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_32xdj"]
+shader = ExtResource("33_nhst1")
+shader_parameter/mouse_xy = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56md3"]
+shader = ExtResource("37_e0dow")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7b5w1"]
+shader = ExtResource("38_7cl1r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ppu68"]
+shader = ExtResource("39_ga3y3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u7d0o"]
+shader = ExtResource("40_f0p2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncvym"]
+shader = ExtResource("41_bj3o7")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
 shader = ExtResource("12_cnqst")
@@ -350,33 +381,74 @@ material = SubResource("ShaderMaterial_1uhvb")
 position = Vector2(67, 624)
 texture = ExtResource("2_idyo4")
 
+[node name="Cellurar_Noise_2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wk0ln")
+position = Vector2(419, 624)
+texture = ExtResource("2_idyo4")
+
 [node name="Cellurar_Noise_1" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_y45kj")
 position = Vector2(246, 624)
 texture = ExtResource("2_idyo4")
 script = ExtResource("33_uyjjy")
 
+[node name="Cellurar_Noise_3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_32xdj")
+position = Vector2(577, 624)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="Cellurar_Noise_4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_56md3")
+position = Vector2(737, 624)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="FBM_1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_7b5w1")
+position = Vector2(64, 846)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="FBM_2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ppu68")
+position = Vector2(246, 846)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="FBM_3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_u7d0o")
+position = Vector2(429, 846)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="FBM_4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ncvym")
+position = Vector2(585, 846)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Practicing_1" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_8a00e")
-position = Vector2(64, 962)
+position = Vector2(66, 1152)
 texture = ExtResource("2_idyo4")
 
 [node name="Practicing_2" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_2gcpw")
-position = Vector2(208, 963)
+position = Vector2(210, 1153)
 scale = Vector2(0.999999, 1)
 texture = ExtResource("2_idyo4")
 
 [node name="Practicing_Signed_Distance" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_dommj")
-position = Vector2(360, 962)
+position = Vector2(362, 1152)
 rotation = -3.14159
 texture = ExtResource("2_idyo4")
 
 [node name="Barber" type="Sprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_ly7dm")
-position = Vector2(516, 962)
+position = Vector2(518, 1152)
 rotation = -3.14159
 texture = ExtResource("2_idyo4")
