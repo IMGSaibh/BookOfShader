@@ -1,31 +1,31 @@
 [gd_scene load_steps=90 format=3 uid="uid://d3ne5ejl7h1le"]
 
-[ext_resource type="Shader" path="res://Shader/ShapesDrawing/ShapingFunctions.gdshader" id="1_1vwi1"]
+[ext_resource type="Shader" path="res://Shader/Basics/Shape_Functions/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
-[ext_resource type="Shader" path="res://Shader/Colors/RGBGradients.gdshader" id="3_rumq6"]
-[ext_resource type="Shader" path="res://Shader/Colors/HSB.gdshader" id="4_8pmil"]
-[ext_resource type="Shader" path="res://Shader/Colors/Converting_Color_Space.gdshader" id="5_2d8lm"]
-[ext_resource type="Shader" path="res://Shader/Colors/HSBPolarCoords.gdshader" id="5_4gnmm"]
-[ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawRectangles.gdshader" id="6_gcevk"]
-[ext_resource type="Shader" path="res://Shader/ShapesDrawing/DrawCircles.gdshader" id="7_xqeor"]
-[ext_resource type="Shader" path="res://Shader/ShapesDrawing/DistanceFields.gdshader" id="8_i5lr3"]
-[ext_resource type="Shader" path="res://Shader/ShapesDrawing/PolarShapes.gdshader" id="9_ikpbn"]
-[ext_resource type="Shader" path="res://Shader/ShapesDrawing/PolarShapes_2.gdshader" id="10_cd6ud"]
-[ext_resource type="Shader" path="res://Shader/2D_Matrices/2D_Matrices.gdshader" id="10_gktan"]
-[ext_resource type="Shader" path="res://Shader/Patterns/Patterns.gdshader" id="12_74yud"]
-[ext_resource type="Shader" path="res://Shader/Practice/Practicing_1.gdshader" id="12_cnqst"]
-[ext_resource type="Shader" path="res://Shader/Practice/Practicing_2.gdshader" id="13_ogs7h"]
-[ext_resource type="Shader" path="res://Shader/Practice/Practicing_Signed_Distance.gdshader" id="13_qb8a2"]
+[ext_resource type="Shader" path="res://Shader/Basics/Colors/RGBGradients.gdshader" id="3_rumq6"]
+[ext_resource type="Shader" path="res://Shader/Basics/Colors/HSB.gdshader" id="4_8pmil"]
+[ext_resource type="Shader" path="res://Shader/Basics/Colors/Converting_Color_Space.gdshader" id="5_2d8lm"]
+[ext_resource type="Shader" path="res://Shader/Basics/Colors/HSBPolarCoords.gdshader" id="5_4gnmm"]
+[ext_resource type="Shader" path="res://Shader/Basics/Shape_Functions/DrawRectangles.gdshader" id="6_gcevk"]
+[ext_resource type="Shader" path="res://Shader/Basics/Shape_Functions/DrawCircles.gdshader" id="7_xqeor"]
+[ext_resource type="Shader" path="res://Shader/Basics/DistanceFields.gdshader" id="8_i5lr3"]
+[ext_resource type="Shader" path="res://Shader/Basics/PolarShapes.gdshader" id="9_ikpbn"]
+[ext_resource type="Shader" path="res://Shader/Basics/PolarShapes_2.gdshader" id="10_cd6ud"]
+[ext_resource type="Shader" path="res://Shader/Basics/2D_Matrices.gdshader" id="10_gktan"]
+[ext_resource type="Shader" path="res://Shader/Patterns/Patterns_1.gdshader" id="12_74yud"]
+[ext_resource type="Shader" path="res://Shader/Practice/Mandala.gdshader" id="12_cnqst"]
+[ext_resource type="Shader" path="res://Shader/Practice/Circles.gdshader" id="13_ogs7h"]
+[ext_resource type="Shader" path="res://Shader/Practice/Signed_Distance.gdshader" id="13_qb8a2"]
 [ext_resource type="Shader" path="res://Shader/Patterns/Patterns_2.gdshader" id="14_lgamd"]
 [ext_resource type="Shader" path="res://Shader/Patterns/Patterns_3.gdshader" id="15_vb330"]
 [ext_resource type="Shader" path="res://Shader/Patterns/Patterns_4.gdshader" id="16_oo0vl"]
 [ext_resource type="Shader" path="res://Shader/Patterns/Patterns_5_Truchet_Kacheln.gdshader" id="17_s5h1q"]
 [ext_resource type="Shader" path="res://Shader/Practice/Barber.gdshader" id="18_1j4vx"]
-[ext_resource type="Shader" path="res://Shader/Random/Random_1.gdshader" id="18_w4g54"]
-[ext_resource type="Shader" path="res://Shader/Random/Random_2.gdshader" id="19_4xqie"]
-[ext_resource type="Shader" path="res://Shader/Random/Random_3.gdshader" id="20_5gpxs"]
-[ext_resource type="Shader" path="res://Shader/Random/Random_4.gdshader" id="21_hy0ix"]
-[ext_resource type="Shader" path="res://Shader/Random/Random_5.gdshader" id="22_gn20k"]
+[ext_resource type="Shader" path="res://Shader/Randomness/Random_1.gdshader" id="18_w4g54"]
+[ext_resource type="Shader" path="res://Shader/Randomness/Random_2.gdshader" id="19_4xqie"]
+[ext_resource type="Shader" path="res://Shader/Randomness/Random_3.gdshader" id="20_5gpxs"]
+[ext_resource type="Shader" path="res://Shader/Randomness/Random_4.gdshader" id="21_hy0ix"]
+[ext_resource type="Shader" path="res://Shader/Randomness/Random_5.gdshader" id="22_gn20k"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_1.gdshader" id="23_27due"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_2.gdshader" id="24_3rwoa"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_3.gdshader" id="25_a0jc3"]
@@ -35,17 +35,151 @@
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_7.gdshader" id="29_p06ms"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_8.gdshader" id="30_api08"]
 [ext_resource type="Shader" path="res://Shader/Noise/Noise_9.gdshader" id="31_q5b45"]
-[ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_2.gdshader" id="32_dbqwv"]
-[ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_1.gdshader" id="32_gwt6b"]
-[ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_3.gdshader" id="33_nhst1"]
-[ext_resource type="Script" path="res://Shader/CellularNoise/Cellurar_Noise_1.gd" id="33_uyjjy"]
-[ext_resource type="Script" path="res://Shader/CellularNoise/Cellurar_Noise_3.gd" id="36_70yvg"]
-[ext_resource type="Shader" path="res://Shader/CellularNoise/Cellurar_Noise_4.gdshader" id="37_e0dow"]
+[ext_resource type="Shader" path="res://Shader/Cellular_Noise/Cellular_Noise_2.gdshader" id="32_dbqwv"]
+[ext_resource type="Shader" path="res://Shader/Cellular_Noise/Cellular_Noise_1.gdshader" id="32_gwt6b"]
+[ext_resource type="Shader" path="res://Shader/Cellular_Noise/Cellular_Noise_3.gdshader" id="33_nhst1"]
+[ext_resource type="Script" path="res://Shader/Cellular_Noise/Cellular_Noise_1.gd" id="33_uyjjy"]
+[ext_resource type="Script" path="res://Shader/Cellular_Noise/Cellular_Noise_3.gd" id="36_70yvg"]
+[ext_resource type="Shader" path="res://Shader/Cellular_Noise/Cellular_Noise_4.gdshader" id="37_e0dow"]
 [ext_resource type="Shader" path="res://Shader/FBM/FBM_1.gdshader" id="38_7cl1r"]
 [ext_resource type="Shader" path="res://Shader/FBM/FBM_2.gdshader" id="39_ga3y3"]
 [ext_resource type="Shader" path="res://Shader/FBM/FBM_3.gdshader" id="40_f0p2a"]
 [ext_resource type="Shader" path="res://Shader/FBM/FBM_4.gdshader" id="41_bj3o7"]
-[ext_resource type="Shader" path="res://Shader/Practice/Practicing_3.gdshader" id="44_hd5s4"]
+[ext_resource type="Shader" path="res://Shader/Practice/Hellfire.gdshader" id="44_hd5s4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
+shader = ExtResource("12_cnqst")
+shader_parameter/glow = 0.003
+shader_parameter/zoom_out = 0.828
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2gcpw"]
+shader = ExtResource("13_ogs7h")
+shader_parameter/glow = 0.0
+shader_parameter/rings = 11.215
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f4s3k"]
+shader = ExtResource("44_hd5s4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dommj"]
+shader = ExtResource("13_qb8a2")
+shader_parameter/pos_x = 0.5
+shader_parameter/pos_y = 0.5
+shader_parameter/radius = 0.37
+shader_parameter/moveable_angle = 115.024
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ly7dm"]
+shader = ExtResource("18_1j4vx")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7b5w1"]
+shader = ExtResource("38_7cl1r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ppu68"]
+shader = ExtResource("39_ga3y3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u7d0o"]
+shader = ExtResource("40_f0p2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncvym"]
+shader = ExtResource("41_bj3o7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_51yha"]
+shader = ExtResource("23_27due")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n5qra"]
+shader = ExtResource("24_3rwoa")
+shader_parameter/scale = 16.822
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6tipj"]
+shader = ExtResource("25_a0jc3")
+shader_parameter/left_side = 0.029
+shader_parameter/right_side = 0.679
+shader_parameter/top_side = 0.042
+shader_parameter/bottom_side = 0.041
+shader_parameter/rect_offset_1 = 0.327
+shader_parameter/rect_offset_2 = 0.649
+shader_parameter/scale = 89.72
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_srmy3"]
+shader = ExtResource("26_0sy53")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xb3fa"]
+shader = ExtResource("27_fn2fs")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ddwsc"]
+shader = ExtResource("28_tp6lk")
+shader_parameter/pos_x = null
+shader_parameter/pos_y = 0.0
+shader_parameter/size = 0.514
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g5mqd"]
+shader = ExtResource("29_p06ms")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qfvf1"]
+shader = ExtResource("30_api08")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1uhvb"]
+shader = ExtResource("31_q5b45")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y45kj"]
+shader = ExtResource("32_gwt6b")
+shader_parameter/mouse_xy = null
+shader_parameter/numPoints = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wk0ln"]
+shader = ExtResource("32_dbqwv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_32xdj"]
+shader = ExtResource("33_nhst1")
+shader_parameter/mouse_xy = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56md3"]
+shader = ExtResource("37_e0dow")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ndgc8"]
+shader = ExtResource("18_w4g54")
+shader_parameter/constvalue_1 = 17.407
+shader_parameter/constvalue_2 = 17.407
+shader_parameter/constvalue_3 = 20094.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ai30h"]
+shader = ExtResource("19_4xqie")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sxh42"]
+shader = ExtResource("20_5gpxs")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8scg2"]
+shader = ExtResource("21_hy0ix")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s88bm"]
+shader = ExtResource("22_gn20k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7kmw3"]
+shader = ExtResource("12_74yud")
+shader_parameter/radius = 0.252
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c4o0c"]
+shader = ExtResource("14_lgamd")
+shader_parameter/size = 0.075
+shader_parameter/smooth_edges = 0.0
+shader_parameter/angle = 0.0
+shader_parameter/size_angle_based = 0.253
+shader_parameter/pos_x = 0.0
+shader_parameter/pos_y = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pigrw"]
+shader = ExtResource("15_vb330")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q26pd"]
+shader = ExtResource("16_oo0vl")
+shader_parameter/zoom = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_srhna"]
+shader = ExtResource("17_s5h1q")
+shader_parameter/truchetTiling = 4
+shader_parameter/hStripeThickness = 0.01
+shader_parameter/pos_x = 0.786
+shader_parameter/pos_y = 0.859
+shader_parameter/size_1_distance_field = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7eerd"]
 shader = ExtResource("1_1vwi1")
@@ -99,367 +233,249 @@ shader_parameter/pos_x = 0.0
 shader_parameter/pos_y = 0.0
 shader_parameter/size = 0.542
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7kmw3"]
-shader = ExtResource("12_74yud")
-shader_parameter/radius = 0.252
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c4o0c"]
-shader = ExtResource("14_lgamd")
-shader_parameter/size = 0.075
-shader_parameter/smooth_edges = 0.0
-shader_parameter/angle = 0.0
-shader_parameter/size_angle_based = 0.253
-shader_parameter/pos_x = 0.0
-shader_parameter/pos_y = 0.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pigrw"]
-shader = ExtResource("15_vb330")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q26pd"]
-shader = ExtResource("16_oo0vl")
-shader_parameter/zoom = 5
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_srhna"]
-shader = ExtResource("17_s5h1q")
-shader_parameter/truchetTiling = 4
-shader_parameter/hStripeThickness = 0.01
-shader_parameter/pos_x = 0.786
-shader_parameter/pos_y = 0.859
-shader_parameter/size_1_distance_field = 0.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ndgc8"]
-shader = ExtResource("18_w4g54")
-shader_parameter/constvalue_1 = 17.407
-shader_parameter/constvalue_2 = 17.407
-shader_parameter/constvalue_3 = 20094.1
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ai30h"]
-shader = ExtResource("19_4xqie")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sxh42"]
-shader = ExtResource("20_5gpxs")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8scg2"]
-shader = ExtResource("21_hy0ix")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s88bm"]
-shader = ExtResource("22_gn20k")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_51yha"]
-shader = ExtResource("23_27due")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_n5qra"]
-shader = ExtResource("24_3rwoa")
-shader_parameter/scale = 16.822
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6tipj"]
-shader = ExtResource("25_a0jc3")
-shader_parameter/left_side = 0.029
-shader_parameter/right_side = 0.679
-shader_parameter/top_side = 0.042
-shader_parameter/bottom_side = 0.041
-shader_parameter/rect_offset_1 = 0.327
-shader_parameter/rect_offset_2 = 0.649
-shader_parameter/scale = 89.72
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_srmy3"]
-shader = ExtResource("26_0sy53")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xb3fa"]
-shader = ExtResource("27_fn2fs")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ddwsc"]
-shader = ExtResource("28_tp6lk")
-shader_parameter/pos_x = null
-shader_parameter/pos_y = 0.0
-shader_parameter/size = 0.514
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g5mqd"]
-shader = ExtResource("29_p06ms")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qfvf1"]
-shader = ExtResource("30_api08")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1uhvb"]
-shader = ExtResource("31_q5b45")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wk0ln"]
-shader = ExtResource("32_dbqwv")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_y45kj"]
-shader = ExtResource("32_gwt6b")
-shader_parameter/mouse_xy = null
-shader_parameter/numPoints = null
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_32xdj"]
-shader = ExtResource("33_nhst1")
-shader_parameter/mouse_xy = null
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_56md3"]
-shader = ExtResource("37_e0dow")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7b5w1"]
-shader = ExtResource("38_7cl1r")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ppu68"]
-shader = ExtResource("39_ga3y3")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u7d0o"]
-shader = ExtResource("40_f0p2a")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncvym"]
-shader = ExtResource("41_bj3o7")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8a00e"]
-shader = ExtResource("12_cnqst")
-shader_parameter/glow = 0.003
-shader_parameter/zoom_out = 0.828
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2gcpw"]
-shader = ExtResource("13_ogs7h")
-shader_parameter/glow = 0.0
-shader_parameter/rings = 11.215
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_f4s3k"]
-shader = ExtResource("44_hd5s4")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dommj"]
-shader = ExtResource("13_qb8a2")
-shader_parameter/pos_x = 0.5
-shader_parameter/pos_y = 0.5
-shader_parameter/radius = 0.37
-shader_parameter/moveable_angle = 115.024
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ly7dm"]
-shader = ExtResource("18_1j4vx")
-
 [node name="Node2D" type="Node2D"]
 
-[node name="ShapingFunctions" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_7eerd")
-position = Vector2(64, 64)
-texture = ExtResource("2_idyo4")
+[node name="Practicing" type="Node2D" parent="."]
 
-[node name="RGBGradients" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_na5di")
-position = Vector2(208, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="HSB" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_umwe4")
-position = Vector2(359, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="Converting_Color_Space" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_kwbah")
-position = Vector2(359, -86)
-texture = ExtResource("2_idyo4")
-
-[node name="HSBPolarCoords" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_tsh4a")
-position = Vector2(506, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="DrawRectangles" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_fqenn")
-position = Vector2(663, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="DrawCircles" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_eq622")
-position = Vector2(815, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="DistanceFields" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_a5egl")
-position = Vector2(966, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="PolarShapes" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_bmmnf")
-position = Vector2(1125, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="PolarShapes_2" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ayx1s")
-position = Vector2(1295, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="2D_Matrices" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_5f1ll")
-position = Vector2(1461, 64)
-texture = ExtResource("2_idyo4")
-
-[node name="Patterns" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_7kmw3")
-position = Vector2(65, 265)
-texture = ExtResource("2_idyo4")
-
-[node name="Patterns_2" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_c4o0c")
-position = Vector2(209, 265)
-texture = ExtResource("2_idyo4")
-
-[node name="Patterns_3" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_pigrw")
-position = Vector2(359, 265)
-texture = ExtResource("2_idyo4")
-
-[node name="Patterns_4" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_q26pd")
-position = Vector2(505, 265)
-texture = ExtResource("2_idyo4")
-
-[node name="Patterns_5_Truchet_Kacheln" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_srhna")
-position = Vector2(652, 265)
-texture = ExtResource("2_idyo4")
-
-[node name="Random_1" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ndgc8")
-position = Vector2(66, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Random_2" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ai30h")
-position = Vector2(224, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Random_3" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_sxh42")
-position = Vector2(389, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Random_4" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_8scg2")
-position = Vector2(530, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Random_5" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_s88bm")
-position = Vector2(686, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_1" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_51yha")
-position = Vector2(858, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_2" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_n5qra")
-position = Vector2(1009, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_3" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_6tipj")
-position = Vector2(1158, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_4" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_srmy3")
-position = Vector2(1299, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_5" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_xb3fa")
-position = Vector2(1444, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_6" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ddwsc")
-position = Vector2(1586, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_7" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_g5mqd")
-position = Vector2(1754, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_8" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_qfvf1")
-position = Vector2(1909, 439)
-texture = ExtResource("2_idyo4")
-
-[node name="Noise_9" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_1uhvb")
-position = Vector2(67, 624)
-texture = ExtResource("2_idyo4")
-
-[node name="Cellurar_Noise_2" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_wk0ln")
-position = Vector2(419, 624)
-texture = ExtResource("2_idyo4")
-
-[node name="Cellurar_Noise_1" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_y45kj")
-position = Vector2(246, 624)
-texture = ExtResource("2_idyo4")
-script = ExtResource("33_uyjjy")
-
-[node name="Cellurar_Noise_3" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_32xdj")
-position = Vector2(577, 624)
-texture = ExtResource("2_idyo4")
-script = ExtResource("36_70yvg")
-
-[node name="Cellurar_Noise_4" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_56md3")
-position = Vector2(737, 624)
-texture = ExtResource("2_idyo4")
-script = ExtResource("36_70yvg")
-
-[node name="FBM_1" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_7b5w1")
-position = Vector2(64, 846)
-texture = ExtResource("2_idyo4")
-script = ExtResource("36_70yvg")
-
-[node name="FBM_2" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ppu68")
-position = Vector2(246, 846)
-texture = ExtResource("2_idyo4")
-script = ExtResource("36_70yvg")
-
-[node name="FBM_3" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_u7d0o")
-position = Vector2(429, 846)
-texture = ExtResource("2_idyo4")
-script = ExtResource("36_70yvg")
-
-[node name="FBM_4" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ncvym")
-position = Vector2(585, 846)
-texture = ExtResource("2_idyo4")
-script = ExtResource("36_70yvg")
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="Practicing_1" type="Sprite2D" parent="Node2D"]
+[node name="Mandala" type="Sprite2D" parent="Practicing"]
 material = SubResource("ShaderMaterial_8a00e")
 position = Vector2(66, 1152)
 texture = ExtResource("2_idyo4")
 
-[node name="Practicing_2" type="Sprite2D" parent="Node2D"]
+[node name="Circles" type="Sprite2D" parent="Practicing"]
 material = SubResource("ShaderMaterial_2gcpw")
 position = Vector2(210, 1153)
 scale = Vector2(0.999999, 1)
 texture = ExtResource("2_idyo4")
 
-[node name="Practicing_3" type="Sprite2D" parent="Node2D"]
+[node name="Hellfire" type="Sprite2D" parent="Practicing"]
 material = SubResource("ShaderMaterial_f4s3k")
 position = Vector2(693, 1150.75)
 scale = Vector2(0.964844, 0.964844)
 texture = ExtResource("2_idyo4")
 script = ExtResource("36_70yvg")
 
-[node name="Practicing_Signed_Distance" type="Sprite2D" parent="Node2D"]
+[node name="Signed_Distance" type="Sprite2D" parent="Practicing"]
 material = SubResource("ShaderMaterial_dommj")
 position = Vector2(362, 1152)
 rotation = -3.14159
 texture = ExtResource("2_idyo4")
 
-[node name="Barber" type="Sprite2D" parent="Node2D"]
+[node name="Barber" type="Sprite2D" parent="Practicing"]
 material = SubResource("ShaderMaterial_ly7dm")
 position = Vector2(518, 1152)
 rotation = -3.14159
+texture = ExtResource("2_idyo4")
+
+[node name="Fractional_Brownian_Motion" type="Node2D" parent="."]
+position = Vector2(2, 99)
+
+[node name="FBM_1" type="Sprite2D" parent="Fractional_Brownian_Motion"]
+material = SubResource("ShaderMaterial_7b5w1")
+position = Vector2(64, 846)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="FBM_2" type="Sprite2D" parent="Fractional_Brownian_Motion"]
+material = SubResource("ShaderMaterial_ppu68")
+position = Vector2(246, 846)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="FBM_3" type="Sprite2D" parent="Fractional_Brownian_Motion"]
+material = SubResource("ShaderMaterial_u7d0o")
+position = Vector2(429, 846)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="FBM_4" type="Sprite2D" parent="Fractional_Brownian_Motion"]
+material = SubResource("ShaderMaterial_ncvym")
+position = Vector2(585, 846)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="Noise" type="Node2D" parent="."]
+position = Vector2(-262, 336)
+
+[node name="Noise_1" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_51yha")
+position = Vector2(329, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_2" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_n5qra")
+position = Vector2(494, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_3" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_6tipj")
+position = Vector2(657, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_4" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_srmy3")
+position = Vector2(820, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_5" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_xb3fa")
+position = Vector2(971, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_6" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_ddwsc")
+position = Vector2(1132, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_7" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_g5mqd")
+position = Vector2(1285, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_8" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_qfvf1")
+position = Vector2(1438, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Noise_9" type="Sprite2D" parent="Noise"]
+material = SubResource("ShaderMaterial_1uhvb")
+position = Vector2(1594, 440)
+texture = ExtResource("2_idyo4")
+
+[node name="Cellular_Noise" type="Node2D" parent="."]
+position = Vector2(-181, -11)
+
+[node name="Cellular_Noise_1" type="Sprite2D" parent="Cellular_Noise"]
+material = SubResource("ShaderMaterial_y45kj")
+position = Vector2(246, 624)
+texture = ExtResource("2_idyo4")
+script = ExtResource("33_uyjjy")
+
+[node name="Cellular_Noise_2" type="Sprite2D" parent="Cellular_Noise"]
+material = SubResource("ShaderMaterial_wk0ln")
+position = Vector2(419, 624)
+texture = ExtResource("2_idyo4")
+
+[node name="Cellular_Noise_3" type="Sprite2D" parent="Cellular_Noise"]
+material = SubResource("ShaderMaterial_32xdj")
+position = Vector2(577, 624)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="Cellular_Noise_4" type="Sprite2D" parent="Cellular_Noise"]
+material = SubResource("ShaderMaterial_56md3")
+position = Vector2(737, 624)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
+[node name="Randomness" type="Node2D" parent="."]
+position = Vector2(-1, -1)
+
+[node name="Random_1" type="Sprite2D" parent="Randomness"]
+material = SubResource("ShaderMaterial_ndgc8")
+position = Vector2(66, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Random_2" type="Sprite2D" parent="Randomness"]
+material = SubResource("ShaderMaterial_ai30h")
+position = Vector2(224, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Random_3" type="Sprite2D" parent="Randomness"]
+material = SubResource("ShaderMaterial_sxh42")
+position = Vector2(389, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Random_4" type="Sprite2D" parent="Randomness"]
+material = SubResource("ShaderMaterial_8scg2")
+position = Vector2(530, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Random_5" type="Sprite2D" parent="Randomness"]
+material = SubResource("ShaderMaterial_s88bm")
+position = Vector2(686, 439)
+texture = ExtResource("2_idyo4")
+
+[node name="Patterns" type="Node2D" parent="."]
+
+[node name="Patterns_1" type="Sprite2D" parent="Patterns"]
+material = SubResource("ShaderMaterial_7kmw3")
+position = Vector2(65, 265)
+texture = ExtResource("2_idyo4")
+
+[node name="Patterns_2" type="Sprite2D" parent="Patterns"]
+material = SubResource("ShaderMaterial_c4o0c")
+position = Vector2(209, 265)
+texture = ExtResource("2_idyo4")
+
+[node name="Patterns_3" type="Sprite2D" parent="Patterns"]
+material = SubResource("ShaderMaterial_pigrw")
+position = Vector2(359, 265)
+texture = ExtResource("2_idyo4")
+
+[node name="Patterns_4" type="Sprite2D" parent="Patterns"]
+material = SubResource("ShaderMaterial_q26pd")
+position = Vector2(505, 265)
+texture = ExtResource("2_idyo4")
+
+[node name="Patterns_5_Truchet_Kacheln" type="Sprite2D" parent="Patterns"]
+material = SubResource("ShaderMaterial_srhna")
+position = Vector2(652, 265)
+texture = ExtResource("2_idyo4")
+
+[node name="Basics" type="Node2D" parent="."]
+
+[node name="ShapingFunctions" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_7eerd")
+position = Vector2(64, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="RGBGradients" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_na5di")
+position = Vector2(208, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="HSB" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_umwe4")
+position = Vector2(359, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="Converting_Color_Space" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_kwbah")
+position = Vector2(359, -86)
+texture = ExtResource("2_idyo4")
+
+[node name="HSBPolarCoords" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_tsh4a")
+position = Vector2(506, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="DrawRectangles" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_fqenn")
+position = Vector2(663, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="DrawCircles" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_eq622")
+position = Vector2(815, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="DistanceFields" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_a5egl")
+position = Vector2(966, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="PolarShapes" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_bmmnf")
+position = Vector2(1125, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="PolarShapes_2" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_ayx1s")
+position = Vector2(1295, 64)
+texture = ExtResource("2_idyo4")
+
+[node name="2D_Matrices" type="Sprite2D" parent="Basics"]
+material = SubResource("ShaderMaterial_5f1ll")
+position = Vector2(1461, 64)
 texture = ExtResource("2_idyo4")
