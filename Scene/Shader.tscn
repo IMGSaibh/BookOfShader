@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://d3ne5ejl7h1le"]
+[gd_scene load_steps=92 format=3 uid="uid://d3ne5ejl7h1le"]
 
 [ext_resource type="Shader" path="res://Shader/Basics/Shape_Functions/ShapingFunctions.gdshader" id="1_1vwi1"]
 [ext_resource type="Texture2D" uid="uid://b5p4w1imkjrmc" path="res://icon.svg" id="2_idyo4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Shader" path="res://Shader/Basics/Colors/Converting_Color_Space.gdshader" id="5_2d8lm"]
 [ext_resource type="Shader" path="res://Shader/Basics/Colors/HSBPolarCoords.gdshader" id="5_4gnmm"]
 [ext_resource type="Shader" path="res://Shader/Basics/Shape_Functions/DrawRectangles.gdshader" id="6_gcevk"]
+[ext_resource type="Shader" path="res://Shader/Practice/GodLight.gdshader" id="6_xptvh"]
 [ext_resource type="Shader" path="res://Shader/Basics/Shape_Functions/DrawCircles.gdshader" id="7_xqeor"]
 [ext_resource type="Shader" path="res://Shader/Basics/DistanceFields.gdshader" id="8_i5lr3"]
 [ext_resource type="Shader" path="res://Shader/Basics/PolarShapes.gdshader" id="9_ikpbn"]
@@ -59,6 +60,22 @@ shader_parameter/rings = 11.215
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f4s3k"]
 shader = ExtResource("44_hd5s4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fouh2"]
+shader = ExtResource("6_xptvh")
+shader_parameter/angle = -0.3
+shader_parameter/position = -0.2
+shader_parameter/spread = 0.5
+shader_parameter/cutoff = 0.1
+shader_parameter/falloff = 0.2
+shader_parameter/edge_fade = 0.15
+shader_parameter/speed = 1.0
+shader_parameter/ray1_density = 8.0
+shader_parameter/ray2_density = 30.0
+shader_parameter/ray2_intensity = 0.3
+shader_parameter/color = Color(1, 0.9, 0.65, 0.8)
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dommj"]
 shader = ExtResource("13_qb8a2")
@@ -255,10 +272,18 @@ scale = Vector2(0.964844, 0.964844)
 texture = ExtResource("2_idyo4")
 script = ExtResource("36_70yvg")
 
+[node name="GodLight" type="Sprite2D" parent="Practicing"]
+material = SubResource("ShaderMaterial_fouh2")
+position = Vector2(865, 1150.75)
+scale = Vector2(0.964844, 1.01684)
+texture = ExtResource("2_idyo4")
+script = ExtResource("36_70yvg")
+
 [node name="Signed_Distance" type="Sprite2D" parent="Practicing"]
 material = SubResource("ShaderMaterial_dommj")
 position = Vector2(362, 1152)
 rotation = -3.14159
+scale = Vector2(1, 1.10785)
 texture = ExtResource("2_idyo4")
 
 [node name="Barber" type="Sprite2D" parent="Practicing"]
